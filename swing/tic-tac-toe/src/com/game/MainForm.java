@@ -30,74 +30,18 @@ public class MainForm {
     public MainForm() {
         ruler = new Ruler(panel1);
 
-        button1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                ruler.getAction(button1, 1);
-            }
-        });
-
-        button2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                ruler.getAction(button2, 2);
-            }
-        });
-
-        button3.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                ruler.getAction(button3, 3);
-            }
-        });
-
-        button4.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                ruler.getAction(button4, 4);
-            }
-        });
-
-        button5.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                ruler.getAction(button5, 5);
-            }
-        });
-
-        button6.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                ruler.getAction(button6, 6);
-            }
-        });
-
-        button7.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                ruler.getAction(button7, 7);
-            }
-        });
-
-        button8.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                ruler.getAction(button8, 8);
-            }
-        });
-
-        button9.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                ruler.getAction(button9, 9);
-            }
-        });
-        repeatButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                ruler.clearAll();
-                clearButtons();
-            }
+        button1.addActionListener(e -> ruler.getAction(button1, 1));
+        button2.addActionListener(e -> ruler.getAction(button2, 2));
+        button3.addActionListener(e -> ruler.getAction(button3, 3));
+        button4.addActionListener(e -> ruler.getAction(button4, 4));
+        button5.addActionListener(e -> ruler.getAction(button5, 5));
+        button6.addActionListener(e -> ruler.getAction(button6, 6));
+        button7.addActionListener(e -> ruler.getAction(button7, 7));
+        button8.addActionListener(e -> ruler.getAction(button8, 8));
+        button9.addActionListener(e -> ruler.getAction(button9, 9));
+        repeatButton.addActionListener(e -> {
+            ruler.clearAll();
+            clearButtons();
         });
     }
 
